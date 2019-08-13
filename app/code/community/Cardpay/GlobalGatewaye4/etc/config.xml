@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Cardpay Solutions, Inc.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * PHP version 5
+ * 
+ * @category  Cardpay
+ * @package   Cardpay_GlobalGatewaye4
+ * @copyright Copyright (c) 2015 Cardpay Solutions, Inc. (http://www.cardpaysolutions.com)
+ * @license   http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
+ */
+-->
+<congig>
+    <modules>
+        <Cardpay_GlobalGatewaye4>
+            <version>1.0.0</version>
+        </Cardpay_GlobalGatewaye4>
+    </modules>
+    <global>
+        <blocks>
+            <globalgatewaye4>
+                <class>Cardpay_GlobalGatewaye4_Block</class>
+            </globalgatewaye4>
+        </blocks>
+        <models>
+            <globalgatewaye4>
+                <class>Cardpay_GlobalGatewaye4_Model</class>
+                <resourceModel>globalgatewaye4_resource</resourceModel>
+            </globalgatewaye4>
+            <globalgatewaye4_resource>
+                <class>Cardpay_GlobalGatewaye4_Model_Resource</class>
+                <entities>
+                    <creditcard>
+                        <table>globalgatewaye4_credit_card</table>
+                    </creditcard>
+                </entities>
+            </globalgatewaye4_resource>
+        </models>
+        <resources>
+            <globalgatewaye4_setup>
+                <setup>
+                    <module>Cardpay_GlobalGatewaye4</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </globalgatewaye4_setup>
+            <globalgatewaye4_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </globalgatewaye4_write>
+            <globalgatewaye4_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </globalgatewaye4_read>
+        </resources>
+        <helpers>
+            <globalgatewaye4>
+                <class>Cardpay_GlobalGatewaye4_Helper</class>
+            </globalgatewaye4>
+        </helpers>
+    </global>
+    <default>
+        <payment>
+            <globalgatewaye4>
+                <active>0</active>
+                <model>globalgatewaye4/paymentMethod</model>
+                <order_status>processing</order_status>
+                <title>Credit Card (Global Gateway e4)</title>
+                <cctypes>VI,MC,AE,DI,JCB</cctypes>
+                <payment_action>authorize</payment_action>
+                <allowspecific>0</allowspecific>
+                <currency>USD</currency>
+                <useccv>1</useccv>
+                <use_vault>1</use_vault>
+            </globalgatewaye4>
+        </payment>
+    </default>
+    <frontend>
+        <layout>
+            <updates>
+                <globalgatewaye4 module="Cardpay_GlobalGatewaye4">
+                    <file>globalgatewaye4.xml</file>
+                </globalgatewaye4>
+            </updates>
+        </layout>
+        <routers>
+            <customer>
+                <args>
+                    <modules>
+                        <Cardpay_GlobalGatewaye4 after="Mage_Customer">Cardpay_GlobalGatewaye4</Cardpay_GlobalGatewaye4>
+                    </modules>
+                </args>
+            </customer>
+        </routers>
+        <translate>
+            <modules>
+                <Cardpay_GlobalGatewaye4>
+                    <files>
+                        <default>Cardpay_GlobalGatewaye4.csv</default>
+                    </files>
+                </Cardpay_GlobalGatewaye4>
+            </modules>
+        </translate>
+    </frontend>
+</congig>
