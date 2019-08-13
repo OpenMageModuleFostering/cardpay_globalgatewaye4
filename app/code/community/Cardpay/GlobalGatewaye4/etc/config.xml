@@ -73,7 +73,7 @@
         <payment>
             <globalgatewaye4>
                 <active>0</active>
-                <model>globalgatewaye4/paymentMethod</model>
+                <model>globalgatewaye4/paymentmethod</model>
                 <order_status>processing</order_status>
                 <title>Credit Card (Global Gateway e4)</title>
                 <cctypes>VI,MC,AE,DI,JCB</cctypes>
