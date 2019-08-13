@@ -71,7 +71,7 @@ class Cardpay_GlobalGatewaye4_Model_Creditcard extends Mage_Core_Model_Abstract
      */
     public function useVault()
     {
-        $globalgatewaye4 = Mage::getModel('globalgatewaye4/paymentmethod');
+        $globalgatewaye4 = Mage::getModel('globalgatewaye4/paymentMethod');
         return $globalgatewaye4->getConfigData('use_vault');
     }
 
@@ -82,7 +82,7 @@ class Cardpay_GlobalGatewaye4_Model_Creditcard extends Mage_Core_Model_Abstract
      */
     public function getCardTypeName()
     {
-        $globalgatewaye4 = Mage::getModel('globalgatewaye4/paymentmethod');
+        $globalgatewaye4 = Mage::getModel('globalgatewaye4/paymentMethod');
         return Mage::helper('globalgatewaye4')->getCcTypeName($this->getCcType());
     }
 

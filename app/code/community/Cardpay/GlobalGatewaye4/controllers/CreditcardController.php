@@ -92,7 +92,7 @@ class Cardpay_GlobalGatewaye4_CreditCardController extends Mage_Customer_Account
             $card->addData($data['payment']);
             $card->setData('customer_id', $customerId);
             $card->setData('cardholder_name', $cardholderName);
-            $globalgatewaye4 = Mage::getModel('globalgatewaye4/paymentmethod');
+            $globalgatewaye4 = Mage::getModel('globalgatewaye4/paymentMethod');
             try {
                 $token = $globalgatewaye4->verify($card);
             } catch (Exception $e) {
@@ -135,7 +135,7 @@ class Cardpay_GlobalGatewaye4_CreditCardController extends Mage_Customer_Account
             $card->addData($data['payment']);
             $card->setData('customer_id', $customerId);
             $card->setData('cardholder_name', $cardholderName);
-            $globalgatewaye4 = Mage::getModel('globalgatewaye4/paymentmethod');
+            $globalgatewaye4 = Mage::getModel('globalgatewaye4/paymentMethod');
             try {
                 $token = $globalgatewaye4->verify($card);
             } catch (Exception $e) {
