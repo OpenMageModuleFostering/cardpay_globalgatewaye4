@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Cardpay_GlobalGatewaye4",
+    "name": "OpenMageModuleFostering\/Cardpay_GlobalGatewaye4",
     "type": "magento-module",
     "license": "Open-Software-License-(OSL)",
     "homepage": "",
     "description": "First Data Global Gateway e4 payment extension with TransArmor.",
     "authors": [
-    {
-        "name": "Brian McGowan",
-        "email": "bmcgowan@cardpaysolutions.com"
-    }
-],
+        {
+            "name": "Brian McGowan",
+            "email": "bmcgowan@cardpaysolutions.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
