@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/Cardpay_GlobalGatewaye4",
+    "name": "openmage-module-fostering\/cardpay_globalgatewaye4",
     "type": "magento-module",
-    "license": "Open-Software-License-(OSL)",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "First Data Global Gateway e4 payment extension with TransArmor.",
     "authors": [
